@@ -6,10 +6,10 @@ LIBS = -lGL -lGLU -lglut
 a.out : ${OBJS}
 	${CC} ${GDB} ${OBJS} ${LIBS}
 
-objects/main.o: main.cpp
+objects/main.o: main.cpp headers/core.h
 	${CC} -c main.cpp -o objects/main.o
 
-objects/core.o: core.cpp
+objects/core.o: core.cpp headers/core.h
 	${CC} -c core.cpp -o objects/core.o
 
 clean:
