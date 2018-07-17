@@ -4,7 +4,7 @@ OBJS = objects/main.o objects/core.o
 LIBS = -lGL -lGLU -lglut
 
 a.out : ${OBJS}
-	${CC} ${GDB} ${OBJS} ${LIBS}
+	${CC} ${GDB} ${OBJS} ${LIBS} -o bin/main.out
 
 objects/main.o: main.cpp headers/core.h
 	${CC} -c main.cpp -o objects/main.o
