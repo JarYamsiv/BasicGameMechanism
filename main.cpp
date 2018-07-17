@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv)
 {
-  _CORE;
+
   glutInit(&argc,argv);
   glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
   glutInitWindowSize(640, 480);
