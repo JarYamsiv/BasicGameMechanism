@@ -1,6 +1,7 @@
 #ifndef _CORE_H
 #define _CORE_H
 #include <GL/freeglut.h>
+#include "player.h"
 
 class CORE{
 public:
@@ -10,7 +11,7 @@ public:
     void        ProcessEvents(bool*);
     void        Update();
 private:
-    
+    Player      mainPlayer;
     
 
 };

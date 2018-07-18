@@ -10,34 +10,29 @@ CORE _CORE(7);
 
 CORE::CORE(int x)
 {
-    std::cout<<"Core initialised!!";
+    mainPlayer=Player();
+    std::cout<<"Core initialised!!"<<std::endl;
 }
 
 CORE::~CORE()
 {
-    std::cout<<"Deleting core";
+    std::cout<<"Deleting core"<<std::endl;
 }
 
 void CORE::Display()
 {
-    glColor3f(1.0, 1.0, 1.0);		/* set current color to white */
-        glBegin(GL_POLYGON);			/* draw filled triangle */
-            glVertex2f(pos,pos);			/* specify each vertex of triangle */
-            glVertex2f(0.0,0.1);
-            glVertex2f(0.1,0.1);
-        glEnd();	
-    glFlush();
+    	mainPlayer.Display();
 }
 
 void CORE::ProcessEvents(bool *gKey_)
 {
     if(gKey_['w'])
     {
-        pos+=0.001;
+        mainPlayer.Move(0.001);
     }
     if(gKey_['s'])
     {
-        pos-=0.001;
+        mainPlayer.Move(-0.001);
     }
 
 }
